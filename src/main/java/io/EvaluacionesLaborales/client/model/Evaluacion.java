@@ -14,8 +14,6 @@ public class Evaluacion {
   private String fechaAplicacion = null;
   @SerializedName("folioAplicacion")
   private String folioAplicacion = null;
-  @SerializedName("folioConsulta")
-  private String folioConsulta = null;
   @SerializedName("tiempoRespuesta")
   private String tiempoRespuesta = null;
   @SerializedName("datosCandidato")
@@ -66,18 +64,6 @@ public class Evaluacion {
     this.folioAplicacion = folioAplicacion;
   }
 
-  public Evaluacion folioConsulta(String folioConsulta) {
-    this.folioConsulta = folioConsulta;
-    return this;
-  }
-
-  public String getFolioConsulta() {
-    return folioConsulta;
-  }
-
-  public void setFolioConsulta(String folioConsulta) {
-    this.folioConsulta = folioConsulta;
-  }
 
   public Evaluacion tiempoRespuesta(String tiempoRespuesta) {
     this.tiempoRespuesta = tiempoRespuesta;
@@ -164,7 +150,7 @@ public class Evaluacion {
     return Objects.equals(this.nombreEvaluacion, evaluacion.nombreEvaluacion)
         && Objects.equals(this.fechaAplicacion, evaluacion.fechaAplicacion)
         && Objects.equals(this.folioAplicacion, evaluacion.folioAplicacion)
-        && Objects.equals(this.folioConsulta, evaluacion.folioConsulta)
+   
         && Objects.equals(this.tiempoRespuesta, evaluacion.tiempoRespuesta)
         && Objects.equals(this.datosCandidato, evaluacion.datosCandidato)
         && Objects.equals(this.perfil, evaluacion.perfil)
@@ -174,7 +160,7 @@ public class Evaluacion {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nombreEvaluacion, fechaAplicacion, folioAplicacion, folioConsulta, tiempoRespuesta,
+    return Objects.hash(nombreEvaluacion, fechaAplicacion, folioAplicacion, tiempoRespuesta,
         datosCandidato, perfil, variablesGlobales, variablesLocales);
   }
 
@@ -186,7 +172,6 @@ public class Evaluacion {
     sb.append("    nombreEvaluacion: ").append(toIndentedString(nombreEvaluacion)).append("\n");
     sb.append("    fechaAplicacion: ").append(toIndentedString(fechaAplicacion)).append("\n");
     sb.append("    folioAplicacion: ").append(toIndentedString(folioAplicacion)).append("\n");
-    sb.append("    folioConsulta: ").append(toIndentedString(folioConsulta)).append("\n");
     sb.append("    tiempoRespuesta: ").append(toIndentedString(tiempoRespuesta)).append("\n");
     sb.append("    datosCandidato: ").append(toIndentedString(datosCandidato)).append("\n");
     sb.append("    perfil: ").append(toIndentedString(perfil)).append("\n");
