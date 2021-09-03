@@ -9,8 +9,8 @@ import com.google.gson.annotations.SerializedName;
 public class RespuestaContesta {
   @SerializedName("estatus")
   private Boolean estatus = null;
-  @SerializedName("folioIdentificador")
-  private String folioIdentificador = null;
+  @SerializedName("folioTransaccion")
+  private String folioTransaccion = null;
   @SerializedName("errores")
   private List<Error> errores = null;
 
@@ -27,17 +27,17 @@ public class RespuestaContesta {
     this.estatus = estatus;
   }
 
-  public RespuestaContesta folioIdentificador(String folioIdentificador) {
-    this.folioIdentificador = folioIdentificador;
+  public RespuestaContesta folioTransaccion(String folioTransaccion) {
+    this.folioTransaccion = folioTransaccion;
     return this;
   }
 
-  public String getFolioIdentificador() {
-    return folioIdentificador;
+  public String getfolioTransaccion() {
+    return folioTransaccion;
   }
 
-  public void setFolioIdentificador(String folioIdentificador) {
-    this.folioIdentificador = folioIdentificador;
+  public void setFolioTransaccion(String folioTransaccion) {
+    this.folioTransaccion = folioTransaccion;
   }
 
   public RespuestaContesta errores(List<Error> errores) {
@@ -71,13 +71,13 @@ public class RespuestaContesta {
     }
     RespuestaContesta respuestaContesta = (RespuestaContesta) o;
     return Objects.equals(this.estatus, respuestaContesta.estatus)
-        && Objects.equals(this.folioIdentificador, respuestaContesta.folioIdentificador)
+        && Objects.equals(this.folioTransaccion, respuestaContesta.folioTransaccion)
         && Objects.equals(this.errores, respuestaContesta.errores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(estatus, folioIdentificador, errores);
+    return Objects.hash(estatus, folioTransaccion, errores);
   }
 
   @Override
@@ -86,7 +86,7 @@ public class RespuestaContesta {
     sb.append("class RespuestaContesta {\n");
 
     sb.append("    estatus: ").append(toIndentedString(estatus)).append("\n");
-    sb.append("    folioIdentificador: ").append(toIndentedString(folioIdentificador)).append("\n");
+    sb.append("    folioTransaccion: ").append(toIndentedString(folioTransaccion)).append("\n");
     sb.append("    errores: ").append(toIndentedString(errores)).append("\n");
     sb.append("}");
     return sb.toString();
