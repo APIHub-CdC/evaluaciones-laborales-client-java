@@ -145,7 +145,7 @@ key_alias=cdc
 key_password=your_super_secure_password
 ```
 ### Paso 5. Modificar URL
-En los archivos ContestaApiTest.java o EvaluacionApiTest.java, que se encuentra en ***src/test/java/io/EvaluacionesLaborales/client/api/***. Se deberá modificar los datos de la petición y los datos de consumo:
+En el archivo EvaluacionApiTest.java, que se encuentra en ***src/test/java/io/EvaluacionesLaborales/client/api/***. Se deberá modificar los datos de la petición y los datos de consumo:
 
 1. Configurar ubicación y acceso de la llave creado en el **paso 1** y el certificado descargado en el **paso 2**
    - keystoreFile: ubicacion del archivo keystore.jks
